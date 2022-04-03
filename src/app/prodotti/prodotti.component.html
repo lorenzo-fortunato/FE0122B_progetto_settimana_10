@@ -1,0 +1,17 @@
+<div class="container mt-5">
+
+  <div class="row">
+    <div class="col-6 mb-3" *ngFor="let prodotto of prodotti; let i = index">
+      <div class="card">
+        <img [src] class="card-img-top" >
+        <div class="card-body">
+          <h5 class="card-title">{{ prodotto.name }}</h5>
+
+          <a class="btn btn-success" [routerLink]="['dettagli']" (click)="urca(prodotto.id)">Dettagli</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
